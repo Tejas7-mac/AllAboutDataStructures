@@ -1,10 +1,12 @@
 package Arrays;
 
 public class ArrayDataStructure {
+
     /**
      * The Array is the Object which contains elements of similar data type.
      * We can store only fixed set of elements in java Array.
      */
+
 
     /**
      * Creating the Method to take the array as a Parameter.
@@ -22,6 +24,7 @@ public class ArrayDataStructure {
 
         System.out.println("the Smallest Number In the Array is :- " +smallestNumber);
     }
+
 
     /**
      * creating an array to swap the elements at First index with Last Index.
@@ -145,10 +148,11 @@ public class ArrayDataStructure {
           int clonedArray[] = array.clone();
           // Are you sure the data has copied , few times people lie please do confirm yourself by iterating "clonedArray" .
     }
+
     /**
      * It's time to check yourself the Problem solving Skills on the  Array.
+     * control + click the below link.
+     * https://leetcode.com/problemset/all/?page=1&topicSlugs=array&difficulty=EASY
      */
-    // https://leetcode.com/problemset/all/?page=1&topicSlugs=array&difficulty=EASY
-
 
 }
