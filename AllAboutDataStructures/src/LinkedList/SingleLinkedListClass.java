@@ -69,6 +69,78 @@ public class SingleLinkedListClass {
     }
 
     /**
+     * Insert the element at the start.
+     */
+
+      public void insertAtStart(int data) {
+          Node node = new Node();
+          node.data = data;
+          node.next = head;
+          head = node;
+      }
+
+    /**
+     * we can also insert the data at a specific node.
+     * Based on the index.
+     * @param index the data need to be stored.
+     * @param data the data that need to be stored in the linked list.
+     */
+
+    public void inserAtIndex(int index, int data) {
+
+        Node newNode = new Node();
+        newNode.data = data;
+        newNode.next = null;
+
+
+        if(index == 0) {
+            insertAtStart(data);
+        } else {
+            Node currentNode = head;
+            for (int listindex = 0; listindex < index - 1; listindex++) {
+
+                currentNode = currentNode.next;
+
+            }
+
+            newNode.next = currentNode.next;
+            currentNode.next = newNode;
+        }
+    }
+
+    /**
+     * Now let look at how to delete the element in ana array.
+     * example :- 1-> 2-> 3-> 4-> 5->null;
+     * if we want to delete the data '2' from the linked list.
+     * The idea is to change the address 1 to 3. i.e currently the 1 is storing the address '2' 1-> 2.
+     * Once we change its address then the data i.e 1  will point to 3. 1->3.
+     */
+
+    /**
+     * Let's create a method which will delete the element at a specific index.
+     * @param index takes the index as input and delete the data at that index.
+     */
+      public  void  deleteAt(int index) {
+          if(index == 0) {
+              head = head.next;
+          } else {
+              Node currentNode = head;
+              Node dummyNode = null;
+              for(int listIndex = 0; listIndex < index - 1; listIndex++) {
+                  currentNode = currentNode.next;
+              }
+              dummyNode = currentNode.next;
+              currentNode.next = dummyNode.next;
+              dummyNode = null;
+
+          }
+
+      }
+
+
+
+
+    /**
      * cool now we have inserted the data and formed the linked list.
      * it's time to show the data that we have inserted.
      * we can show the data by iterating through the linked list.
@@ -90,6 +162,5 @@ public class SingleLinkedListClass {
         }
         System.out.println(node.data);
     }
-
 
 }
