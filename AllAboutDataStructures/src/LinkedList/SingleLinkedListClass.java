@@ -137,9 +137,6 @@ public class SingleLinkedListClass {
 
       }
 
-
-
-
     /**
      * cool now we have inserted the data and formed the linked list.
      * it's time to show the data that we have inserted.
@@ -162,5 +159,12 @@ public class SingleLinkedListClass {
         }
         System.out.println(node.data);
     }
+
+    /**
+     * Once you feel you have understood the concept of linked list.
+     * Try to solve the problems on the same concept.
+     * https://leetcode.com/problemset/all/?topicSlugs=linked-list&page=1&difficulty=EASY
+     * Any queries ping me at "tejasreddy.bob@gmail.com".
+     */
 
 }
