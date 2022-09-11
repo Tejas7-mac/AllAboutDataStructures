@@ -8,7 +8,7 @@ public class Main {
 
         Queue queue = new Queue(3);
 
-        System.out.println("Checking Queue is empty or not:" +queue.isEmpty());
+        System.out.println(queue.isEmpty());
 
         // inserting the data inside the queue.
 
@@ -26,10 +26,15 @@ public class Main {
 
 
         // insert the data to the Queue.
-        queue.enQueue(0);
+        queue.enQueue(1);
 
         // display the front data in the queue.
         queue.queueFront();
 
     }
+
+    /**
+     * Let's solve some problems on queue.
+     * https://leetcode.com/problemset/all/?page=1&difficulty=EASY&topicSlugs=queue
+     */
 }

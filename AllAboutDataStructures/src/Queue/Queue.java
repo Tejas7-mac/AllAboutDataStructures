@@ -29,7 +29,7 @@ public class Queue {
              return;
          } else {
              queue[rear] = data;
-            rear++;
+                rear++;
          }
          return;
     }
@@ -39,26 +39,29 @@ public class Queue {
      */
 
      void deQueue() {
+
         if(front == rear) {
 
             System.out.println("The Queue is empty");
 
-        } else  {
+        } else {
 
             for(int index = 0; index < rear - 1; index++) {
 
-                queue[index] =queue[index + 1];
+                queue[index] = queue[index + 1];
 
             }
 
-        }
+            if(rear  < capacity) {
 
-        if(rear < capacity) {
+                queue[rear] = 0;
 
-            queue[rear] = 0;
+            }
             rear--;
 
         }
+
+        return;
     }
 
 
@@ -75,9 +78,9 @@ public class Queue {
             System.out.println("The Queue is Empty");
 
         }
-        System.out.println(" Queue  data :- ");
+        System.out.println(" Data present in the Queue :- ");
 
-        for(index = front; index < rear; index++) {
+        for(index = 0; index < rear ; index++) {
 
             System.out.println(queue[index]);
 
@@ -97,18 +100,7 @@ public class Queue {
 
         }
 
-        System.out.println(queue[front]);
-
-    }
-
-
-    /**
-     * return the size of the queue;
-     */
-
-     void sizeOfQueue() {
-
-        System.out.println(queue.length);
+        System.out.println("The data present at the front is  :-" +queue[front]);
 
     }
 
@@ -120,7 +112,7 @@ public class Queue {
     boolean isEmpty() {
 
         if(front == rear) {
-
+            System.out.println("The queue is empty:-");
             return true;
         }
 
